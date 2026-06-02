@@ -1,0 +1,46 @@
+[
+    {
+      "customerName": "Ananya Sharma",
+      "date": "2026-04-27",
+      "rating": 5,
+      "feedback": "Creative Strokes is my go-to stationery store! The variety of pens, notebooks, and art supplies is amazing, and the staff are always helpful.",
+      "highlightedProducts": [
+        "Premium sketchbooks",
+        "Gel pens"
+      ],
+      "recommendation": "Highly recommended for students, artists, and anyone who loves stationery."
+    },
+    {
+      "customerName": "Rahul Mehta",
+      "date": "2026-04-20",
+      "rating": 4,
+      "feedback": "Great selection of office supplies at reasonable prices. The notebooks are especially durable.",
+      "highlightedProducts": [
+        "Spiral notebooks",
+        "Desk organizers"
+      ],
+      "recommendation": "Perfect for professionals looking for reliable stationery."
+    },
+    {
+      "customerName": "Priya Nair",
+      "date": "2026-04-15",
+      "rating": 5,
+      "feedback": "I love the art section! The watercolor brushes and sketchpads are top-notch.",
+      "highlightedProducts": [
+        "Brush sets",
+        "Art sketchpads"
+      ],
+      "recommendation": "A must-visit for hobby artists and designers."
+    },
+    {
+      "customerName": "Rishabh Jain",
+      "date": "2026-04-15",
+      "rating": 5,
+      "feedback": "I love the art section! The watercolor brushes and sketchpads are top-notch.",
+      "highlightedProducts": [
+        "Brush sets",
+        "Art sketchpads"
+      ],
+      "recommendation": "A must-visit for hobby artists and designers."
+    }
+  ]
