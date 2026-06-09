@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import product from '../data/product.json'
+import React, { useContext, useState } from 'react'
+//import product from '../data/product.json'
 import Counter from './Counter'
+import statContext from '../contextfile/statContext'
 function Product() {
+    let {product}=useContext(statContext);
     return (
         <>
             <section className="container-fluid mb-3 px-3">

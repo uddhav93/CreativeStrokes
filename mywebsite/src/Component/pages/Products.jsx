@@ -2,18 +2,21 @@ import React from 'react'
 import product from './../data/product.json'
 import Counter from '../MyWebsite/Counter'
 import './style.css'
+import Navbar from '../MyWebsite/Navbar'
+import Footer from '../MyWebsite/Footer'
 
 function Products() {
   return (
     <>
+    <Navbar/>
       <section className="container-fluid py-4">
         <div className="row g-4">
           {
             product.map((p) => (
               <div className="col-md-4" key={p.id}>
-                <div className="card h-100 shadow-sm">
+                <div className="card card1 h-100 shadow-sm">
 
-                  <div className="card-header text-center bg-white">
+                  <div className="card-header card-header1 text-center bg-white">
                     <img
                       src={p.imgUrl}
                       alt={p.name}
@@ -35,6 +38,7 @@ function Products() {
           }
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

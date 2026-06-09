@@ -4,13 +4,40 @@
   object-fit: cover;
 }
 
-.card {
+.card1 {
   height: 100%;
 }
 
-.card-header {
+.card-header1 {
   height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.img-container {
+  background-image: url('../MyWebsite/Images/Stationary.jpg');
+  color: rgb(1, 8, 23);
+  font-size: 20px;
+  height: auto;
+  padding: 10%;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* establishes positioning context */
+}
+
+.img-container::before {
+  content: ""; /* required for pseudo-element */
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.548); /* semi-transparent white */
+  z-index: 0; /* sits below text */
+}
+
+.img-container > * {
+  position: relative;
+  z-index: 1; /* ensures headings and button are above overlay */
 }
