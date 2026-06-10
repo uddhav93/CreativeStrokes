@@ -1,14 +1,39 @@
-import React from 'react'
-import product from './../data/product.json'
+import React, { useContext } from 'react'
 import Counter from '../MyWebsite/Counter'
 import './style.css'
 import Navbar from '../MyWebsite/Navbar'
 import Footer from '../MyWebsite/Footer'
+import statContext from '../contextfile/statContext'
+
 
 function Products() {
+  let { product, cart, setCart } = useContext(statContext);
+  function addtocart(proObj, qty) {
+
+    setCart(prev => {
+
+      if (qty === 0) {
+        return prev.filter(item => item.id !== proObj.id);
+      }
+
+      const exists = prev.find(
+        item => item.id === proObj.id
+      );
+
+      if (exists) {
+        return prev.map(item =>
+          item.id === proObj.id
+            ? { ...item, qty }
+            : item
+        );
+      }
+
+      return [...prev, { ...proObj, qty }];
+    });
+  }
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <section className="container-fluid py-4">
         <div className="row g-4">
           {
@@ -29,7 +54,7 @@ function Products() {
                     <h5>{p.category}</h5>
                     <p className="flex-grow-1">{p.desc}</p>
 
-                    <Counter />
+                    <Counter product={p} cart={addtocart} />
                   </div>
 
                 </div>
@@ -38,7 +63,7 @@ function Products() {
           }
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   )
 }

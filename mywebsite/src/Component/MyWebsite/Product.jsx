@@ -3,7 +3,23 @@ import React, { useContext, useState } from 'react'
 import Counter from './Counter'
 import statContext from '../contextfile/statContext'
 function Product() {
-    let {product}=useContext(statContext);
+    let {product,cart,setCart}=useContext(statContext);
+    function addtocart(proObj,qty)
+    {
+        let existProduct=cart.find(i=>i.id==proObj.id);
+        if(existProduct)
+        {
+            const updateCart=cart.map(p=>p.id==proObj.id?{...p,qty}:p)
+            setCart(updateCart)
+        }
+        else{
+            setCart([
+                ...cart,{
+                    ...proObj,qty
+                }
+            ])
+        }
+    }
     return (
         <>
             <section className="container-fluid mb-3 px-3">
@@ -21,7 +37,7 @@ function Product() {
                                         <p>{p.desc}</p>
                                     </div>
                                     <div className="card-footer">
-                                        <Counter id={p.id}/>
+                                        <Counter product={p} cart={addtocart}/>
                                     </div>
                                 </div>
                             </div>
