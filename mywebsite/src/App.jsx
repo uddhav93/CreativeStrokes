@@ -7,6 +7,7 @@ import statContext from './Component/contextfile/statContext'
 import product from './Component/data/product.json'
 import testimonial from './Component/data/testimonials.json'
 import Cart from './Component/pages/Cart'
+import About from './Component/pages/About'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/product' element={<Product />} />
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/about'element={<About/>} />
           </Routes>
         </BrowserRouter>
       </statContext.Provider>

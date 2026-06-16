@@ -41,3 +41,59 @@
   position: relative;
   z-index: 1; /* ensures headings and button are above overlay */
 }
+.about-hero{
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../../assets/about1.jpg');
+  background-size: cover;
+  padding:150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:white;
+  position: relative;
+}
+.about-hero .text-content{
+  padding-left: 200px;
+}
+.about-hero .text-content h2{
+  color: lightblue;
+}
+.content{
+  font-size: 25px;
+  text-align: justify;
+}
+.img-float{
+  position: absolute;
+  top:630px;
+  right: 10px;
+  height: 40%;
+  width: 30%;
+}
+@media (max-width:768px)
+{
+ .about-hero .text-content{
+    padding-left: 90px;
+  }
+  .img-float{
+    position: absolute;
+    top:680px;
+    right: 10px;
+    height: 50%;
+    width: 50%;
+  } 
+}
+@media (max-width:425px)
+{
+  .about-hero .text-content{
+    padding: 10px;
+    /* text-align: center; */
+  }
+  .img-float{
+    position: absolute;
+    top:920px;
+    right: 10px;
+    height: 50%;
+    width: 50%;
+    opacity: .5;
+  }
+}

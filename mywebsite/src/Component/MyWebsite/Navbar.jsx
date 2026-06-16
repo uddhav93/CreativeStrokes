@@ -17,14 +17,15 @@ function Navbar() {
                                 <NavLink to='/' className='nav-link'>Home</NavLink>
                             </li>
                             <li className="nav-item">
+                                <NavLink to='/about' className='nav-link'>About Us</NavLink>
+                            </li>
+                            <li className="nav-item">
                                 <NavLink to='/product' className='nav-link'>Product</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to='/cart' className='nav-link'>Cart</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
+
                         </ul>
                         <NavLink to='/product'><button className="btn btn-outline-info" type="submit">Shop Here</button></NavLink>
                     </div>
