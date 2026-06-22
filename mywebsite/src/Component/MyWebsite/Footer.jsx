@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../MyWebsite/Images/logo.png'
 import insta from './../pages/images/instagram.png'
 import fb from '../pages/images/facebook.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -20,18 +21,18 @@ function Footer() {
           </div>
           <div className="col-sm-4">
             <h2 className='text-white'>Quick Links</h2>
-            <ul>
-              <li>Home</li>
-              <li>About us</li>
-              <li>Products</li>
-              <li>Cart</li>
-              <li>Contact us</li>
+            <ul className='text-white'>
+              <li> <Link className='text-white link-underline link-underline-opacity-0' to='/'>Home</Link> </li>
+              <li> <Link className='text-white link-underline link-underline-opacity-0' to='/about'>About us</Link> </li>
+              <li> <Link className='text-white link-underline link-underline-opacity-0' to='/product'>Product</Link> </li>
+              <li> <Link className='text-white link-underline link-underline-opacity-0' to='/cart'>Cart</Link> </li>
+              <li> <Link className='text-white link-underline link-underline-opacity-0'>Contact Us</Link> </li>
             </ul>
           </div>
           <div className="col-sm-4">
             <h3 className='text-white'>Contact Us</h3>
             <h5 className='text-white'>Email:</h5>
-            <p>mailsupport@creativestrokes.com</p>
+            <p className='text-white'>mailsupport@creativestrokes.com</p>
             <h5 className='text-white'>Call Us:</h5>
             <h5 className='text-white'>+91 8542316695</h5>
             <h4 className='text-white'>Follow Us</h4>

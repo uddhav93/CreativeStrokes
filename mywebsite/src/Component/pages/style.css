@@ -69,6 +69,9 @@
   height: 40%;
   width: 30%;
 }
+.about-details{
+  margin-top:40px
+}
 @media (max-width:768px)
 {
  .about-hero .text-content{
@@ -76,12 +79,31 @@
   }
   .img-float{
     position: absolute;
-    top:680px;
+    top:700px;
     right: 10px;
     height: 50%;
     width: 50%;
   } 
 }
+@media screen and (min-width:425px) and (max-width:767px)  
+{
+  .about-hero .text-content{
+    padding: 20px;
+  }
+  .img-float{
+    position: absolute;
+    top:720px;
+    right: 10px;
+    height: 55%;
+    width: 55%;
+  }
+  .about-details{
+    margin-top:0px;
+    text-align: center;
+  }
+  
+}
+
 @media (max-width:425px)
 {
   .about-hero .text-content{
