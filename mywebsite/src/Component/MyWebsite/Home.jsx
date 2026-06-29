@@ -6,7 +6,7 @@ import About from './About';
 import Testimonial from './Testimonial';
 import Contact from './Contact';
 import Footer from './Footer';
-
+import { Link } from 'react-router-dom';
 function Home() {
     return (
         <>
@@ -14,7 +14,7 @@ function Home() {
             <section className='img-container'>
                 <h1>Creative Strokes</h1>
                 <h3>Creative Strokes- Inspiring Every Mark You Make</h3>
-                <button className="btn btn-info">Know More</button>
+                <Link className='btn btn-primary text-white' to='/about'>Know More</Link>
             </section>
             <br />
             <About/>
